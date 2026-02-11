@@ -1,0 +1,24 @@
+#正の数だけを対象にする
+def sei_kazu(numbers):
+    result = [n for n in numbers if n > 0]
+    return result
+
+#判定ルール
+def sei_max(result):
+    if len(result) == 0:
+        return "NONE"
+    
+    m = max(result)
+    if m >= 100:
+        return "EXCELLENT"
+    elif m >= 50:
+        return "GOOD"
+    else:
+        return "OK"
+
+#まとめ役
+def sei_numbers(numbers):
+    result = sei_kazu(numbers)
+    return sei_max(result)
+print(sei_numbers([50,1]))
+

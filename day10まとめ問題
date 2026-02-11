@@ -1,0 +1,30 @@
+#条件分岐
+def judge_score(score):
+    if score >= 80:
+        return "A"
+    elif score >= 60:
+        return "B"
+    else:
+        return "C"
+print(judge_score(79))
+
+#条件の順番
+def discount(price):
+    if price >= 2000:
+        return price * 0.8
+    elif price >= 1000:
+        return price * 0.9
+    else:
+        return price
+print(discount(1000))
+
+#Noneを返さない
+def check_age(age):
+    if age >= 18:
+        return "adult"
+    elif age >= 0:
+        return "child"
+    else:
+        return "invalid"
+print(check_age(-1))
+
